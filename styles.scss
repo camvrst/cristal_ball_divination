@@ -1,0 +1,128 @@
+/* dependencies */
+@import "@fortawesome/fontawesome-free/css/all.css";
+// @import "~bootstrap/scss/bootstrap";
+
+/* local imports */
+@import "./styles/variables";
+@import "./styles/fonts";
+@import "./styles/base";
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
+
+.section-question {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.images {
+  position: relative;
+  height: 70vh;
+  width: 100vw;
+}
+
+.boule {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 5vh;
+  left: 50vw;
+  transform: translateX(-53%);
+}
+
+.magic-one {
+  display: none;
+  background-image: url(./static/images/magic1-2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  top: 5vh;
+  left: 20vw;
+  animation: bouger2 linear infinite 0.8s;
+  transform: rotate(-15deg);
+}
+
+.magic-two {
+  display: none;
+  background-image: url(./static/images/magic2-2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  top: -3vh;
+  right: 20vw;
+  animation: bouger linear infinite 0.8s;
+  transform: rotate(15deg);
+}
+
+@keyframes bouger {
+  0% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes bouger2 {
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+.section-question {
+  position: absolute;
+  bottom: 1vh;
+  right: 50vw;
+  transform: translateX(50%);
+  font-family: "Fascinate";
+  font-size: 30px;
+  letter-spacing: 2px;
+  input {
+    border: none;
+    outline: none;
+    color: $primary-color;
+    background-color: rgb(39, 38, 38);
+    font-family: "Fascinate";
+    font-size: 18px;
+    padding: 10px;
+  }
+  button {
+    border: none;
+    padding: 12px 20px;
+    font-family: "Fascinate";
+    font-size: 18px;
+    color: white;
+    background-color: rgb(151, 104, 196);
+    margin: 10px 0;
+    outline: none;
+    z-index: 1;
+  }
+}
+
+.reponse {
+  font-family: "Fascinate";
+  font-size: 30px;
+  letter-spacing: 2px;
+  z-index: 5;
+  p {
+    z-index: 5;
+  }
+}
